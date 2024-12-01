@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+    <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        nav .nav-link:hover {
+            background-color: #adaf4c;
+            color: white !important;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        /* Ajustando o aspecto e dimensões do carousel */
+        wa-carousel {
+            --aspect-ratio: 16 / 9; /* Proporção widescreen */
+            max-width: 500px; /* Limita a largura do carousel */
+            margin: 0 auto; /* Centraliza o carousel */
+            border-radius: 10px; /* Adiciona bordas arredondadas */
+            overflow: hidden; /* Evita elementos saindo do container */
+        }
+        .wa-carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantém a imagem enquadrada */
+        }
+        .card {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            
+        }
+        .row {
+            margin-top: 2rem;
+        }
+        @media (min-width: 992px) {
+            .card {
+                margin-right: 1rem;
+            }
+        }
+        #cardp{
+            height: 100%;
+        }
+        .iconbottm{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Meu Portfólio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="py-5 text-center bg-light">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p class="lead">Olá! Eu sou um desenvolvedor apaixonado por criar soluções inovadoras. Tenho experiência em desenvolvimento web, mobile e design. Adoro aprender novas tecnologias e colaborar em projetos desafiadores.</p>
+        </div>
+
+    <!-- Projetos -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projetos</h2>
+            <div class="row justify-content-center">
+                <!-- Card Projeto 1 -->
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Projeto Solazer</h5>
+                            <wa-carousel pagination navigation mouse-dragging loop style="--aspect-ratio: auto;">
+                                <wa-carousel-item>
+                                    <img src="card01.png" alt="Projeto Solazer 1" />
+                                </wa-carousel-item>
+                                <wa-carousel-item>
+                                    <img src="card02.png" alt="Projeto Solazer 2" />
+                                </wa-carousel-item>
+                                <wa-carousel-item>
+                                    <img src="card03.png" alt="Projeto Solazer 3" />
+                                </wa-carousel-item>
+                                <wa-carousel-item>
+                                    <img src="card04.png" alt="Projeto Solazer 4" />
+                                </wa-carousel-item>
+                            </wa-carousel>
+                            <p class="card-text mt-3 text-center">Aplicativo para consulta e compra de cursos do evento CONAFF ENORFF.</p>
+                            <wa-button appearance="text" variant="neutral"><a href="https://solazer-eventos-0syzui.flutterflow.app/"target="_blank"><wa-icon name="search"></wa-icon></a></wa-button>
+                       
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Projeto 2 -->
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="card" id="cardp">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Projeto Buscar Filmes</h5>
+                            <wa-carousel pagination navigation mouse-dragging loop style="--aspect-ratio: auto;">
+                                <wa-carousel-item>
+                                    <img src="filme01.png" alt="Projeto Buscar Filmes 1" />
+                                </wa-carousel-item>
+                                <wa-carousel-item>
+                                    <img src="filme02.png" alt="Projeto Buscar Filmes 2" />
+                                </wa-carousel-item>
+                            </wa-carousel>
+                            <p class="card-text mt-3 text-center">Aplicativo para consulta de informações sobre filmes recentes e antigos.</p>
+                            <wa-button appearance="text" variant="neutral"><a href="https://movie-api.flutterflow.app/"target="_blank"><wa-icon name="search"></wa-icon></a></wa-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Habilidades -->
+       <section id="skills" class="py-5 text-center bg-light">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-2">
+                    <div class="alert alert-secondary">FlutterFlow</div>
+                </div>
+                <div class="col-md-2">
+                    <div class="alert alert-success">HTML</div>
+                </div>
+                <div class="col-md-2">
+                    <div class="alert alert-primary">CSS</div>
+                </div>
+                <div class="col-md-2">
+                    <div class="alert alert-warning">JavaScript</div>
+                </div>
+                <div class="col-md-2">
+                    <div class="alert alert-secondary">Bootstrap</div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section id="contact" class="py-5 text-center">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo pelo e-mail: <a href="mailto:seuemail@exemplo.com">vitorhenrique.dd@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vitor Henrique. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
